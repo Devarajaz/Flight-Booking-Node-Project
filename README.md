@@ -1,4 +1,3 @@
-This is a base node js project template, which anyone can use as it has been prepared, by keepinh sum of the most important code principles and project management recomendationa. feel free to change anything
 
 `src` -> inside the src folder all the actual source code regarding the project will reside, this will not include any kind of tests. (you might want to make separate tests folder)
 
@@ -21,6 +20,7 @@ Lets take a look inside the `src` folder
 ### Setup the project
 
  - Download this template from github and open it in your favourite tesxt editor. 
+ - Go inside the folder path and execute the following command.
  - In the root directory create a `-env` file and add the following anv variables.
  ```
     PORT =<port number of your choice>
@@ -29,32 +29,19 @@ Lets take a look inside the `src` folder
 ```
     PORT = 3000
 ``` 
-Inside the `src/config` folder create a file named as `config.json` and write the following code.
-```
-{
-  "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  }
-}
-```
+ - Go inside the `src` folder and execute the following command: 
+ ``` 
+    npx sequelize init 
+ ```
+ - By executing the above command you will get migration and seeders folder along with a config.json inside the config folder.
+
  - If you are setting up your development environment, then write the username of your DB, password of your DB and in dialect mention whatever db you are using for ex: mysql, mariadb, etc
 
  - If you are setting up test or prod environment, make sure you also replace the host with the hosted db url.
+
+ - To run the server execute 
+ ``` 
+ npm run dev
+ ```
+
+ 
